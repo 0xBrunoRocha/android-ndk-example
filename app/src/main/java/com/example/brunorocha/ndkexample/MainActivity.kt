@@ -11,7 +11,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Example of a call to a native method
-        sample_text.text = stringFromJNI()
+        //sample_text.text = stringFromJNI()
+        sample_text.text = validatePrimeNumber(10).toString();
+
     }
 
     /**
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity() {
      * which is packaged with this application.
      */
     external fun stringFromJNI(): String
+    external fun validatePrimeNumber(value: Int): Boolean
 
     companion object {
 
